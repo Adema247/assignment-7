@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adema's Beauty Shop</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-..." crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <header class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="logo" tabindex="0">&#128132; Adema's Beauty Shop</div>
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html" class="nav-item active" data-index="0" tabindex="0">&#127968; Home</a>
+      <a href="catalog.html" class="nav-item" data-index="1" tabindex="0">&#128194; Catalog</a>
+      <a href="brands.html" class="nav-item" data-index="2" tabindex="0">&#128141; Brands</a>
+      <button id="themeToggle" class="ghost-btn" aria-pressed="false">Toggle Theme</button>
+      <button id="contactBtn" class="ghost-btn">Contact Us</button>
+      <button id="changeBgBtn" class="ghost-btn">Change Background</button>
+    </nav>
+  </header>
+
+  <section class="main-banner">
+    <img data-src="https://s3.images-iherb.com/cms/banners/salebanner122619r1ru-ru.jpg" alt="Sale Banner" class="lazy">
+  </section>
+
+  <section class="banner">
+    <h1 id="greeting">Welcome to Adema's Beauty Shop</h1>
+    <p id="personalGreeting" class="small-muted">Discover your inner glow with our collection of premium makeup, skincare, and perfumes.</p>
+    <div class="banner-actions">
+      <a href="catalog.html" class="btn primary">Shop Now</a>
+      <button id="showTimeBtn" class="btn">Show Current Time</button>
+      <span id="timeDisplay" class="small-muted" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Our Store</h2>
+    <p id="aboutShort">Adema’s Beauty Shop offers carefully selected beauty products for every style and mood.</p>
+    <p id="aboutMore" style="display:none">We believe that self-care starts with quality and comfort. Our team curates trusted brands and tests products to ensure safety and results. Visit our catalog to explore categories and special offers.</p>
+    <button id="readMoreBtn" class="btn">Read More</button>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3 class="count" data-target="120">0</h3>
+      <p>Quality Brands</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="count" data-target="98">0</h3>
+      <p>Fast Delivery (%)</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="count" data-target="10">0</h3>
+      <p>Years of Trust</p>
+    </div>
+  </section>
+
+  <section class="interactive-sample">
+    <h2>Featured Product — Rate & Gallery</h2>
+    <div class="product-card large" id="featuredProduct">
+      <div class="gallery">
+        <img id="mainImage" data-src="https://pcdn.goldapple.ru/p/p/19000388767/web/696d674d61696e5064708ddc5c81852aa1d.jpg" alt="Featured product main" class="lazy">
+        <div class="thumbnails">
+          <img class="thumb lazy" src="https://pcdn.goldapple.ru/p/p/19000388767/web/696d674d61696e5064708ddc5c81852aa1d.jpg" alt="thumb1" data-src="https://pcdn.goldapple.ru/p/p/19000388767/web/696d674d61696e5064708ddc5c81852aa1d.jpg">
+          <img class="thumb lazy" src="https://basket-26.wbbasket.ru/vol4770/part477029/477029288/images/big/1.webp" alt="thumb2" data-src="https://basket-26.wbbasket.ru/vol4770/part477029/477029288/images/big/1.webp">
+          <img class="thumb lazy" src="https://static.onlinetrade.ru/img/items/b/rumyana_dlya_litsa_matovye_vivienne_sabo_macaron_ton_04_3123797_7.jpg" alt="thumb3" data-src="https://static.onlinetrade.ru/img/items/b/rumyana_dlya_litsa_matovye_vivienne_sabo_macaron_ton_04_3123797_7.jpg">
+        </div>
+      </div>
+      <h3>Discount code: BEAUTY2025 <button class="copy-btn small" data-copy="BEAUTY2025">Copy</button></h3>
+      <p class="price"><s>3450₸</s> <strong>2932₸</strong></p>
+
+      <div class="rating" aria-label="Product rating" role="radiogroup">
+        <span class="star" data-value="1" role="radio" aria-checked="false">&#9734;</span>
+        <span class="star" data-value="2" role="radio" aria-checked="false">&#9734;</span>
+        <span class="star" data-value="3" role="radio" aria-checked="false">&#9734;</span>
+        <span class="star" data-value="4" role="radio" aria-checked="false">&#9734;</span>
+        <span class="star" data-value="5" role="radio" aria-checked="false">&#9734;</span>
+        <span id="ratingValue" class="small-muted">0/5</span>
+      </div>
+
+      <div class="product-actions">
+        <button id="buyBtn" class="btn">Buy</button>
+        <button id="playSoundBtn" class="btn">Play Sound</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
+      <p>2025 Adema’s Beauty Shop. All rights reserved.</p>
+      <p>Developed by Adema | SE-2407 Group</p>
+    </div>
+    <div class="footer-right">
+      <div id="datetimeFooter" aria-live="polite"></div>
+    </div>
+  </footer>
+
+  <div id="popupOverlay" class="popup-overlay hidden" aria-hidden="true">
+    <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <button class="close-popup" id="closePopup" aria-label="Close contact form">&times;</button>
+      <h2 id="popupTitle">Contact Us</h2>
+      <form id="popupContactForm" class="contact-form">
+        <label>
+          <span>Name</span>
+          <input type="text" id="popupName" name="name" />
+          <small class="error" id="popupNameError"></small>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" id="popupEmail" name="email" />
+          <small class="error" id="popupEmailError"></small>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea id="popupMessage" name="message" rows="4"></textarea>
+          <small class="error" id="popupMessageError"></small>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send</button>
+          <button type="button" id="resetContact" class="btn">Reset</button>
+        </div>
+        <div id="popupSpinner" class="spinner hidden" aria-hidden="true"></div>
+        <div id="popupSuccess" class="form-success" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

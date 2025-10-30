@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfume - Adema's Beauty Shop</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <div class="logo">&#128132; Perfume</div>
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html" class="nav-item">&#127968; Home</a>
+      <a href="catalog.html" class="nav-item">&#128194; Catalog</a>
+      <a href="brands.html" class="nav-item">&#128141; Brands</a>
+      <button id="contactBtnPerfume" class="ghost-btn">Contact Us</button>
+    </nav>
+  </header>
+
+  <main class="catalog-section">
+    <h1>Perfume Collection</h1>
+    <p class="catalog-item">Discover our elegant fragrances that express individuality and charm.</p>
+
+    <div class="catalog-grid">
+      <div class="product-card">
+        <img data-src="https://avatars.mds.yandex.net/get-mpic/13894603/2a00000196a7f2951c56d7f407a8d0d3e96b/orig" alt="Dior J'adore perfume" class="lazy">
+        <h2>Dior J'adore Eau de Parfum</h2>
+        <p>Iconic floral-fruity fragrance.</p>
+        <p>Price: <s>58,000₸</s> <strong>51,300₸</strong></p>
+        <button class="btn buy">Buy</button>
+      </div>
+
+      <div class="product-card">
+        <img data-src="https://static.wixstatic.com/media/e4e86c_a8aee42ff7394527b32f7fbf1d9dea2b~mv2.webp" alt="Chanel Coco Mademoiselle perfume" class="lazy">
+        <h2>Chanel Coco Mademoiselle</h2>
+        <p>Fresh and seductive blend.</p>
+        <p>Price: <s>63,000₸</s> <strong>56,700₸</strong></p>
+        <button class="btn buy">Buy</button>
+      </div>
+
+      <div class="product-card">
+        <img data-src="https://img.grouponcdn.com/stores/BnbYrgS6mDpzver1Ncy7MTyQqLu/storespi30480174-970x582/v1/t4200x2520.jpg" alt="YSL Black Opium perfume" class="lazy">
+        <h2>YSL Black Opium</h2>
+        <p>Warm and energetic fragrance.</p>
+        <p>Price: <s>47,000₸</s> <strong>41,900₸</strong></p>
+        <button class="btn buy">Buy</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>2025 Adema’s Beauty Shop. All rights reserved.</p>
+      <p>Developed by Adema | SE-2407 Group</p>
+    </div>
+    <div class="footer-right">
+      <div id="datetimeFooter" aria-live="polite"></div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
