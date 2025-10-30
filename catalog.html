@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalog - Adema's Beauty Shop</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <div class="logo">&#128132; Catalog</div>
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html" class="nav-item">&#127968; Home</a>
+      <a href="catalog.html" class="nav-item active">&#128194; Catalog</a>
+      <a href="brands.html" class="nav-item">&#128141; Brands</a>
+      <button id="contactBtnCatalog" class="ghost-btn">Contact Us</button>
+    </nav>
+  </header>
+
+  <main class="catalog-section">
+    <h1>Our Product Categories</h1>
+    <p class="catalog-item">Choose your beauty favorite — from trendy makeup to gentle skincare and exquisite perfumes.</p>
+
+    <div class="catalog-controls">
+      <input id="catalogSearch" placeholder="Search products or brands..." autocomplete="off">
+      <div id="suggestions" class="suggestions hidden"></div>
+      <select id="catalogFilter">
+        <option value="">All</option>
+        <option value="makeup">Makeup</option>
+        <option value="skincare">Skincare</option>
+        <option value="perfume">Perfume</option>
+      </select>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- cards will be present in DOM already or filtered live -->
+      <div class="product-card" data-category="makeup">
+        <img data-src="https://yt3.googleusercontent.com/ytc/AIdro_nQ-lpnJ0XFQjyKFlsA5UgUab-OX2bUmLchr3i-OFVerw=s900-c-k-c0x00ffffff-no-rj" alt="Makeup products" class="lazy">
+        <h2>PUSY Brow Mascara</h2>
+        <p>Everything you need for a flawless look — lipsticks, blushes, mascaras, and more.</p>
+        <a href="makeup.html" class="btn">Explore</a>
+      </div>
+
+      <div class="product-card" data-category="skincare">
+        <img data-src="https://snappshop.ir/plus/wp-content/uploads/2025/02/5-4.jpg" alt="Skincare products" class="lazy">
+        <h2>CeraVe Moisturizing Cream</h2>
+        <p>Nourish and protect your skin with our carefully selected creams, masks, and serums.</p>
+        <a href="skincare.html" class="btn">Explore</a>
+      </div>
+
+      <div class="product-card" data-category="perfume">
+        <img data-src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6568532d888ea25365763db8_656889b7e129441f1f30ccdc/scale_1200" alt="Perfume bottles" class="lazy">
+        <h2>Charming Perfume</h2>
+        <p>Elegant, bold, or gentle — find the fragrance that tells your story.</p>
+        <a href="perfume.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>2025 Adema’s Beauty Shop. All rights reserved.</p>
+      <p>Developed by Adema | SE-2407 Group</p>
+    </div>
+    <div class="footer-right">
+      <div id="datetimeFooter" aria-live="polite"></div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

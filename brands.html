@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brands - Adema's Beauty Shop</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <div class="logo">&#128132; Brands</div>
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html" class="nav-item">&#127968; Home</a>
+      <a href="catalog.html" class="nav-item">&#128194; Catalog</a>
+      <a href="brands.html" class="nav-item active">&#128141; Brands</a>
+      <button id="contactBtnBrands" class="ghost-btn">Contact Us</button>
+    </nav>
+  </header>
+
+  <main class="catalog-section">
+    <h1>Our Featured Brands</h1>
+    <p class="catalog-item">We collaborate with trusted beauty brands that value quality and innovation.</p>
+
+    <div class="catalog-controls">
+      <input id="brandsSearch" placeholder="Search brands..." autocomplete="off">
+      <div id="suggestionsBrands" class="suggestions hidden"></div>
+    </div>
+
+    <div class="catalog-grid" id="brandsGrid">
+      <div class="product-card" data-name="Chanel">
+        <img data-src="https://i.pinimg.com/originals/96/47/22/96472272414230a9395ecafb17b05da2.png" alt="Chanel logo" class="lazy">
+        <h2>Chanel</h2>
+        <p>Elegance and timeless luxury.</p>
+      </div>
+      <div class="product-card" data-name="Dior">
+        <img data-src="https://i.pinimg.com/originals/69/88/83/698883b9543172c3b37dfe7fac04c624.jpg" alt="Dior logo" class="lazy">
+        <h2>Dior</h2>
+        <p>Innovative skincare and stunning perfumes.</p>
+      </div>
+      <div class="product-card" data-name="Yves Saint Laurent">
+        <img data-src="https://image.winudf.com/v2/image1/Y29tLnNhaW50bGF1cmVudC5yb2Nrb25tYW5fc2NyZWVuXzFfMTU3Nzg4MTU4N18wNTI/screen-1.jpg?fakeurl=1&type=.jpg" alt="YSL logo" class="lazy">
+        <h2>Yves Saint Laurent</h2>
+        <p>Bold and luxurious.</p>
+      </div>
+    </div>
+
+    <section class="faq" id="faqSection">
+      <button class="accordion-button" aria-expanded="false">How to choose the right brand?</button>
+      <div class="accordion-panel"><p>Consider reviews, ingredients and your skin type. Test samples when possible.</p></div>
+
+      <button class="accordion-button" aria-expanded="false">Do you ship internationally?</button>
+      <div class="accordion-panel"><p>We currently ship across Kazakhstan; international shipping is under consideration.</p></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>2025 Adema’s Beauty Shop. All rights reserved.</p>
+      <p>Developed by Adema | SE-2407 Group</p>
+    </div>
+    <div class="footer-right">
+      <div id="datetimeFooter" aria-live="polite"></div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
